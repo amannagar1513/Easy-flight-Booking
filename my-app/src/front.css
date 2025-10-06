@@ -1,0 +1,320 @@
+/* 🌐 Global */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  background: #f4f7fb;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+}
+
+/* 🌟 Header */
+.header {
+  background: linear-gradient(135deg, #0a2a57, #1a3c70);
+  color: white;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+}
+
+.support {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.support-text {
+  color: #f0f0f0;
+  font-weight: 500;
+}
+
+.header-phone {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.header-phone:hover {
+  color: #fff;
+  text-shadow: 0 0 12px #ffd700, 0 0 25px #ffc107;
+}
+
+/* 🛫 Hero */
+.hero {
+  background: url("/dada.png") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 140px 20px;
+  position: relative;
+  display: flex;          /* added */
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center if needed */
+  flex-direction: column;  /* stack content vertically */
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 42, 87, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+.hero h1 {
+  font-size: 54px;
+  margin-bottom: 18px;
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  text-shadow: 2px 2px 14px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: 400;
+  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
+}
+
+/* ✨ Hero Phone */
+.hero-phone {
+  font-size: 28px;
+  margin: 28px 0;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 1px 3px 12px rgba(0,0,0,0.6);
+  /* animation: glow 1.5s infinite alternate; */
+}
+
+.hero-phone a {
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 32px;
+}
+
+.hero-phone a:hover {
+  color: #fff;
+}
+
+/* Glow animation */
+@keyframes glow {
+  from { text-shadow: 0 0 8px #ffd700, 0 0 20px #ffc107; }
+  to { text-shadow: 0 0 20px #ffd700, 0 0 40px #ffca28; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🔘 Call-to-Action */
+.cta-btn {
+  padding: 18px 36px;
+  background: linear-gradient(135deg, #ffd700, #ffc107);
+  color: #1a1a1a;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(135deg, #ffca28, #ffb300);
+  transform: scale(1.1);
+}
+
+/* 🎯 Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 80px 20px;
+  background: #eef3fc; /* light blue background */
+}
+
+.feature-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2a57; /* navy text */
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+}
+
+/* 💸 Deals */
+.deals {
+  padding: 80px 20px;
+  text-align: center;
+  background: #dbe6f8; /* soft premium blue */
+}
+
+.deals h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #0a2a57;
+  font-family: "Playfair Display", serif;
+}
+
+.deal-list {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.deal-card {
+  background: #ffffff;
+  padding: 26px;
+  border-radius: 16px;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-size: 18px;
+  font-weight: 500;
+  color: #0a2a57;
+}
+
+.deal-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* 💬 Testimonials */
+.testimonials {
+  background: #eef5fc; /* matching premium theme */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 32px;
+  margin-bottom: 28px;
+  font-family: "Playfair Display", serif;
+  color: #0a2a57;
+}
+
+.testimonial-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 16px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  font-size: 16px;
+  color: #0a2a57;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ❓ FAQ */
+.faq {
+  padding: 80px 20px;
+  background: #ffffff; /* clean white to keep premium and readable */
+}
+
+.faq h2 {
+  font-size: 32px;
+  margin-bottom: 28px;
+  color: #0a2a57;
+  font-family: "Playfair Display", serif;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  font-size: 17px;
+  padding: 16px;
+  border-left: 5px solid #0a2a57;
+  background: #f7f9fc;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  color: #1a1a1a;
+}
+
+.faq-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* ⬇️ Footer */
+.footer {
+  background: #0a2a57;
+  color: #dcdcdc;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.footer-phone {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footer-phone:hover {
+  color: #fff;
+}
+
+/* 📞 Floating Call Button */
+.floating-call {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ffd700;
+  color: #0a2a57;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  transition: transform 0.3s, background 0.3s;
+  text-decoration: none;
+  z-index: 999;
+}
+
+.floating-call:hover {
+  transform: scale(1.15);
+  background: #ffc107;
+}
