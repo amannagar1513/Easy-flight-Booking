@@ -10,7 +10,7 @@ const Front = () => {
         <div className="support">
           <span className="support-text">📞 24/7 Support:</span>
           <a href="tel:+11234567890" className="header-phone">
-            +1 (123) 456-7890
+            +1 (630) 824-3722
           </a>
         </div>
       </header>
