@@ -1,13 +1,231 @@
-/* 🌐 Global */
+/* 🌍 Global */
+/* Global */
 body {
   margin: 0;
-  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-  background: #f4f7fb;
-  color: #1a1a1a;
-  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #f5f8ff, #eef3fa);
+  color: #222;
 }
 
-/* 🌟 Header */
+.site-wrapper {
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #004aad, #0078d7);
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.support {
+  font-size: 16px;
+  background: rgba(255,255,255,0.15);
+  padding: 8px 18px;
+  border-radius: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Hero */
+.hero {
+  background: url("/dada.png") center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 130px 20px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,50,0.4));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 18px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 22px;
+  color: #e8e8e8;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  padding: 15px 32px;
+  background: linear-gradient(135deg, #ffb300, #ff6b00);
+  color: white;
+  border-radius: 30px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+  transition: all 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #ffc000, #ff7f1a);
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 70px 40px;
+  background: linear-gradient(180deg, #ffffff, #f3f7ff);
+}
+
+.feature-card {
+  background: linear-gradient(135deg, #f5f8ff, #e0ecff);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+/* Deals */
+.deals {
+  padding: 80px 30px;
+  text-align: center;
+  background: linear-gradient(180deg, #f9fbff, #e9f0ff);
+}
+
+.deals h2 {
+  color: #004aad;
+  font-size: 32px;
+}
+
+.deal-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.deal-card {
+  background: linear-gradient(135deg, #ffffff, #f1f5ff);
+  padding: 25px;
+  border-radius: 15px;
+  width: 260px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.deal-card:hover {
+  transform: scale(1.06);
+}
+
+/* Testimonials */
+.testimonials {
+  background: linear-gradient(180deg, #e3f0ff, #ffffff);
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #003f8c;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.testimonial-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 28px;
+  border-radius: 15px;
+  width: 300px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FAQ */
+.faq {
+  padding: 80px 40px;
+  background: linear-gradient(180deg, #ffffff, #f2f8ff);
+}
+
+.faq-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.faq-item:hover {
+  transform: scale(1.02);
+}
+
+.faq-item h4 {
+  margin: 0 0 5px 0;
+  font-size: 19px;
+  color: #005bbb;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #0b1a3c, #001f3f);
+  color: #ccc;
+  padding: 35px;
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.3);
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+  background: #f4f8ff;
+  color: #1a1a1a;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Keep Header + Hero exactly same */
 .header {
   background: linear-gradient(135deg, #0a2a57, #1a3c70);
   color: white;
@@ -36,265 +254,211 @@ body {
   gap: 8px;
 }
 
-.support-text {
-  color: #f0f0f0;
-  font-weight: 500;
-}
-
 .header-phone {
   color: #ffd700;
-  font-weight: bold;
   text-decoration: none;
-  transition: color 0.3s, text-shadow 0.3s;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 .header-phone:hover {
   color: #fff;
-  text-shadow: 0 0 12px #ffd700, 0 0 25px #ffc107;
 }
 
-/* 🛫 Hero */
+/* 🛫 Hero - unchanged */
 .hero {
   background: url("/dada.png") center/cover no-repeat;
   color: #fff;
   text-align: center;
   padding: 140px 20px;
   position: relative;
-  display: flex;          /* added */
-  justify-content: center; /* horizontal center */
-  align-items: center;     /* vertical center if needed */
-  flex-direction: column;  /* stack content vertically */
 }
-
 .hero::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  inset: 0;
   background: rgba(10, 42, 87, 0.55);
 }
-
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
-  animation: fadeInUp 1.2s ease-out;
 }
 
-.hero h1 {
-  font-size: 54px;
-  margin-bottom: 18px;
-  font-family: "Playfair Display", serif;
-  font-weight: 800;
-  text-shadow: 2px 2px 14px rgba(0,0,0,0.6);
+/* 👇 Scroll Animation Base */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
 }
 
-.hero p {
-  font-size: 22px;
-  margin-bottom: 30px;
-  font-weight: 400;
-  text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
-}
-
-/* ✨ Hero Phone */
-.hero-phone {
-  font-size: 28px;
-  margin: 28px 0;
-  font-weight: 700;
-  color: #ffd700;
-  text-shadow: 1px 3px 12px rgba(0,0,0,0.6);
-  /* animation: glow 1.5s infinite alternate; */
-}
-
-.hero-phone a {
-  color: #ffd700;
-  text-decoration: none;
-  font-size: 32px;
-}
-
-.hero-phone a:hover {
-  color: #fff;
-}
-
-/* Glow animation */
-@keyframes glow {
-  from { text-shadow: 0 0 8px #ffd700, 0 0 20px #ffc107; }
-  to { text-shadow: 0 0 20px #ffd700, 0 0 40px #ffca28; }
-}
-
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* 🔘 Call-to-Action */
-.cta-btn {
-  padding: 18px 36px;
-  background: linear-gradient(135deg, #ffd700, #ffc107);
-  color: #1a1a1a;
-  border-radius: 12px;
-  font-size: 20px;
-  font-weight: 700;
-  text-decoration: none;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.35);
-  transition: 0.3s;
-}
-
-.cta-btn:hover {
-  background: linear-gradient(135deg, #ffca28, #ffb300);
-  transform: scale(1.1);
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* 🎯 Features */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  padding: 80px 20px;
-  background: #eef3fc; /* light blue background */
+  gap: 30px;
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #eef3fc 0%, #ffffff 100%);
 }
 
 .feature-card {
   background: #ffffff;
-  padding: 28px;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 32px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   text-align: center;
   font-size: 18px;
   font-weight: 600;
-  color: #0a2a57; /* navy text */
+  color: #0a2a57;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
+  transform: translateY(-12px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 /* 💸 Deals */
 .deals {
-  padding: 80px 20px;
+  background: #f2f7ff;
+  padding: 100px 20px;
   text-align: center;
-  background: #dbe6f8; /* soft premium blue */
 }
 
 .deals h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
+  font-size: 38px;
+  margin-bottom: 40px;
   color: #0a2a57;
   font-family: "Playfair Display", serif;
 }
 
 .deal-list {
   display: flex;
-  gap: 22px;
-  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
-  margin-top: 25px;
+  justify-content: center;
 }
 
 .deal-card {
-  background: #ffffff;
-  padding: 26px;
-  border-radius: 16px;
-  width: 250px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  width: 260px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
   font-size: 18px;
   font-weight: 500;
   color: #0a2a57;
+  transition: all 0.4s ease;
 }
 
 .deal-card:hover {
   transform: scale(1.07);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.25);
 }
 
 /* 💬 Testimonials */
 .testimonials {
-  background: #eef5fc; /* matching premium theme */
-  padding: 80px 20px;
+  background: linear-gradient(180deg, #e9f2ff 0%, #ffffff 100%);
+  padding: 100px 20px;
   text-align: center;
 }
 
 .testimonials h2 {
-  font-size: 32px;
-  margin-bottom: 28px;
-  font-family: "Playfair Display", serif;
+  font-size: 34px;
   color: #0a2a57;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 40px;
 }
 
 .testimonial-list {
   display: flex;
-  gap: 24px;
-  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
 }
 
 .testimonial-card {
   background: #ffffff;
-  padding: 28px;
+  padding: 30px;
   border-radius: 16px;
   width: 280px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-  font-size: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
   color: #0a2a57;
+  font-size: 16px;
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.testimonial-card::before {
+  content: "“";
+  font-size: 70px;
+  color: #ffd700;
+  position: absolute;
+  top: -25px;
+  left: 15px;
+  opacity: 0.2;
 }
 
 .testimonial-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
 }
 
 /* ❓ FAQ */
 .faq {
-  padding: 80px 20px;
-  background: #ffffff; /* clean white to keep premium and readable */
+  padding: 100px 20px;
+  background: #ffffff;
+  max-width: 850px;
+  margin: auto;
 }
 
 .faq h2 {
-  font-size: 32px;
-  margin-bottom: 28px;
+  text-align: center;
   color: #0a2a57;
   font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
 .faq-item {
-  margin-bottom: 20px;
-  font-size: 17px;
-  padding: 16px;
-  border-left: 5px solid #0a2a57;
   background: #f7f9fc;
+  margin: 18px 0;
+  padding: 20px;
+  border-left: 5px solid #0a2a57;
   border-radius: 8px;
+  font-size: 17px;
   transition: transform 0.2s, box-shadow 0.2s;
-  color: #1a1a1a;
 }
 
 .faq-item:hover {
   transform: scale(1.02);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 /* ⬇️ Footer */
 .footer {
   background: #0a2a57;
   color: #dcdcdc;
-  padding: 40px 20px;
+  padding: 50px 20px;
   text-align: center;
   font-size: 15px;
-  line-height: 1.6;
 }
 
 .footer-phone {
   color: #ffd700;
-  font-weight: bold;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .footer-phone:hover {
   color: #fff;
 }
 
-/* 📞 Floating Call Button */
+/* 📞 Floating Call */
 .floating-call {
   position: fixed;
   bottom: 25px;
@@ -309,12 +473,276 @@ body {
   align-items: center;
   justify-content: center;
   box-shadow: 0 10px 25px rgba(0,0,0,0.35);
-  transition: transform 0.3s, background 0.3s;
   text-decoration: none;
   z-index: 999;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .floating-call:hover {
   transform: scale(1.15);
+  background: #ffc107;
+}
+
+/* 🌟 Scroll Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 🩵 Global */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fa;
+  color: #111;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #0b2a55, #133b79);
+  color: #fff;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 1px;
+}
+
+.support {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-phone {
+  color: #ffd700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.header-phone:hover {
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  background: url("/dada.png") center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  padding: 160px 20px;
+  position: relative;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 42, 87, 0.55);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  background: #ffd700;
+  color: #0a2a57;
+  padding: 14px 38px;
+  border-radius: 50px;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.3s ease;
+}
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+/* ✨ Scroll Animation */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+  padding: 90px 20px;
+  background: linear-gradient(180deg, #e8efff 0%, #ffffff 100%);
+}
+.feature-card {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 36px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0a2a57;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+}
+.feature-card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Deals */
+.deals {
+  text-align: center;
+  padding: 100px 20px;
+  background: #f8faff;
+}
+.deals h2 {
+  font-size: 38px;
+  margin-bottom: 50px;
+  color: #0a2a57;
+  font-family: "Playfair Display", serif;
+}
+.deal-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.deal-card {
+  background: linear-gradient(145deg, #ffffff, #eef2ff);
+  border-radius: 20px;
+  padding: 28px;
+  width: 260px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  font-weight: 500;
+}
+.deal-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Testimonials */
+.testimonials {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #edf4ff 0%, #ffffff 100%);
+  text-align: center;
+}
+.testimonials h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #0a2a57;
+}
+.testimonial-card {
+  background: white;
+  border-radius: 20px;
+  width: 280px;
+  padding: 32px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  font-style: italic;
+  color: #0a2a57;
+  transition: all 0.4s ease;
+}
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* FAQ */
+.faq {
+  padding: 100px 20px;
+  max-width: 850px;
+  margin: auto;
+}
+.faq h2 {
+  text-align: center;
+  color: #0a2a57;
+  font-size: 34px;
+  margin-bottom: 35px;
+  font-family: "Playfair Display", serif;
+}
+.faq-item {
+  background: rgba(245, 247, 255, 0.9);
+  padding: 20px 25px;
+  border-radius: 12px;
+  border-left: 5px solid #0a2a57;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+.faq-item:hover {
+  transform: translateX(5px);
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer {
+  background: #0a2a57;
+  color: #dcdcdc;
+  padding: 50px 20px;
+  text-align: center;
+  font-size: 15px;
+}
+.footer-phone {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+}
+.footer-phone:hover {
+  color: #fff;
+}
+
+/* Floating Button */
+.floating-call {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ffd700;
+  color: #0a2a57;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.floating-call:hover {
+  transform: scale(1.15) rotate(10deg);
   background: #ffc107;
 }

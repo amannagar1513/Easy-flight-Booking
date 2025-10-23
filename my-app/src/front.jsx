@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./front.css";
 
 const Front = () => {
+  useEffect(() => {
+    const elements = document.querySelectorAll(".scroll-fade");
+    const reveal = () => {
+      elements.forEach((el) => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add("visible");
+        }
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    reveal();
+    return () => window.removeEventListener("scroll", reveal);
+  }, []);
+
   return (
     <div className="site-wrapper">
       {/* Header */}
@@ -21,11 +36,10 @@ const Front = () => {
           <h1>Fly Smarter, Fly Cheaper </h1>
           <p>Your trusted partner for premium airline bookings</p>
 
-          {/* Big phone number */}
-          <div className="hero-phone">
+          {/* <div className="hero-phone">
             <span>📞 Call Us Anytime:</span>
             <a href="tel:+16308243722">+1 (630) 824-3722</a>
-          </div>
+          </div> */}
 
           <a href="tel:+16308243722" className="cta-btn">
             Book Now
@@ -34,7 +48,7 @@ const Front = () => {
       </section>
 
       {/* Features */}
-      <section className="features">
+      <section className="features scroll-fade">
         <div className="feature-card">🛫 Easy Bookings</div>
         <div className="feature-card">💸 Best Deals</div>
         <div className="feature-card">🌍 Global Reach</div>
@@ -42,7 +56,7 @@ const Front = () => {
       </section>
 
       {/* Deals */}
-      <section className="deals">
+      <section className="deals scroll-fade">
         <h2>Hot Deals for You 🔥</h2>
         <div className="deal-list">
           <div className="deal-card">NYC ✈️ LA — $199</div>
@@ -53,7 +67,7 @@ const Front = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="testimonials">
+      <section className="testimonials scroll-fade">
         <h2>What Our Customers Say 💬</h2>
         <div className="testimonial-list">
           <div className="testimonial-card">“Amazing service, booked instantly!”</div>
@@ -64,7 +78,7 @@ const Front = () => {
       </section>
 
       {/* FAQ */}
-      <section className="faq">
+      <section className="faq scroll-fade">
         <h2>Frequently Asked Questions ❓</h2>
         <div className="faq-item">How do I book flights?</div>
         <div className="faq-item">Can I cancel after booking?</div>
@@ -73,7 +87,7 @@ const Front = () => {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer className="footer scroll-fade">
         <p>© 2025 NexusCore Airlines. All rights reserved.</p>
         <p>
           📞 Call Us:{" "}
